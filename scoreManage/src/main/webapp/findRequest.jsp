@@ -1,0 +1,79 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>findRequest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 400px;
+            padding: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        form h2 {
+            text-align: center;
+        }
+
+        form p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            flex-grow: 1;
+        }
+
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: chocolate;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+<%@ include file="header.jsp" %>
+<form action="findResponse.jsp" method="post">
+    <h2>请输入查询条件</h2>
+    <div>
+        <label>
+            <select name="queryKey">
+                <option value="id">学号</option>
+                <option value="name">姓名</option>
+                <option value="mathScore">数学成绩</option>
+                <option value="englishScore">英语成绩</option>
+                <option value="programScore">项目成绩</option>
+                <option value="databaseScore">数据库成绩</option>
+            </select>
+        </label>
+        <label>
+            <input type="text" name="queryValue">
+        </label>
+        <input type="submit" value="查询">
+    </div>
+</form>
+<%@ include file="footer.jsp" %>
+</body>
+</html>

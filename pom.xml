@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>javaWeb</groupId>
+    <artifactId>javaWeb</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>userManage</module>
+        <module>scoreManage</module>
+    </modules>
+    <version>1.0</version>
+    <name>javaWeb Maven Webapp</name>
+    <url>https://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <finalName>javaWeb</finalName>
+    </build>
+
+</project>
