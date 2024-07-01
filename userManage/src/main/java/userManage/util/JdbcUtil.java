@@ -1,9 +1,9 @@
 package userManage.util;
 
-import java.sql.*;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.*;
 
 public class JdbcUtil {
     static String url = "jdbc:mysql://localhost:3306/javaWeb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8";

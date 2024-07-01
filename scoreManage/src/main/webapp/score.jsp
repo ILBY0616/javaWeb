@@ -9,14 +9,17 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+
         table {
             margin: 50px auto;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
         }
+
         th {
             background-color: #f2f2f2;
         }
@@ -54,14 +57,22 @@
                 score.setDatabaseScore(rs.getInt("databaseScore"));
     %>
     <tr>
-        <td><%= score.getId() %></td>
-        <td><%= score.getName() %></td>
-        <td><%= score.getMathScore() %></td>
-        <td><%= score.getEnglishScore() %></td>
-        <td><%= score.getProgramScore() %></td>
-        <td><%= score.getDatabaseScore() %></td>
-        <td><%= score.getSumScore() %></td>
-        <td><%= String.format("%.2f", score.getAverageScore()) %></td>
+        <td><%= score.getId() %>
+        </td>
+        <td><%= score.getName() %>
+        </td>
+        <td><%= score.getMathScore() %>
+        </td>
+        <td><%= score.getEnglishScore() %>
+        </td>
+        <td><%= score.getProgramScore() %>
+        </td>
+        <td><%= score.getDatabaseScore() %>
+        </td>
+        <td><%= score.getSumScore() %>
+        </td>
+        <td><%= String.format("%.2f", score.getAverageScore()) %>
+        </td>
     </tr>
     <%
             }

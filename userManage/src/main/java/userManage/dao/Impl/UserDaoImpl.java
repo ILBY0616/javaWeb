@@ -38,14 +38,16 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User findUser(String sql, Object[] args) throws SQLException {
         JdbcUtil.open();
-        User user = new User();
+        User user = null;
         try (ResultSet rs = JdbcUtil.query(sql, args)) {
-            rs.next();
-            user.setUid(rs.getInt("uid"));
-            user.setName(rs.getString("name"));
-            user.setPassword(rs.getString("password"));
-            user.setRole(rs.getString("role"));
-            user.setStatus(rs.getString("status"));
+            if (rs.next()) {
+                user = new User();
+                user.setUid(rs.getInt("uid"));
+                user.setName(rs.getString("name"));
+                user.setPassword(rs.getString("password"));
+                user.setRole(rs.getString("role"));
+                user.setStatus(rs.getString("status"));
+            }
         }
         JdbcUtil.close();
         return user;

@@ -82,7 +82,8 @@
     }
 %>
 <div>
-    <h2><%= message %></h2>
+    <h2><%= message %>
+    </h2>
 </div>
 <%@ include file="footer.jsp" %>
 </body>
